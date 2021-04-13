@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+a {
+  @apply font-bold;
+  @apply p-3;
+  @apply cursor-pointer;
+}
+.product img {
+  @apply m-auto;
+}
+h4 {
+  @apply font-bold;
+  @apply text-2xl;
+  @apply text-green-500;
+}
+b {
+  @apply font-bold;
+}

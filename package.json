@@ -3,18 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "next": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@types/react": "^17.0.3",
     "autoprefixer": "^10.0.4",
     "postcss": "^8.1.10",
-    "tailwindcss": "^2.1.1"
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.1.1",
+    "typescript": "^4.2.4",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
+  
 }
