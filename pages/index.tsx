@@ -1,28 +1,29 @@
 import axios, { AxiosResponse } from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Link from 'next/link'
+import AppContext from 'context/AppContext';
  
 const HomePage = () => {
-  const [products, setproducts] = useState<TProduct[] >([])
- 
-  useEffect(() => {
+ // const [products, setproducts] = useState<TProduct[] >([])
+  const { products} = useContext(AppContext);
+ /* useEffect(() => {
     let didCancel=false
     const getProducts =async () =>{
       const responseProducts: AxiosResponse = await axios.get("/api/avo")
       console.log(responseProducts.data)
       !didCancel && setproducts(responseProducts.data.data)
     }
-    getProducts()
+  getProducts()
     return () => {
       
     }
-  }, [])
+  }, [])*/
 useEffect(() => {
   console.log(products)
 }, [products])
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4  mt-4">
     
     
  {products.map((product:TProduct) =>{

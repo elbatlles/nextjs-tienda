@@ -32,3 +32,16 @@ type TAPIAvoResponse = {
   data: TProduct[]
   error?: string
 }
+type Cart = {
+  addToCart: (payload: any) => void;
+  removeFromCart: (payload: any) => void;
+  addToBuyer: (payload: any) => void;
+  addNewOrder: (payload: any) => void;
+  products: TProduct[];
+  state: {
+    cart: TProduct[];
+    buyer: any;
+    orders: any[];
+   
+  };
+}

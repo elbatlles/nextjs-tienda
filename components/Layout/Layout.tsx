@@ -21,16 +21,17 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
            <Navbar />
            
         </header>
-       
+        <div className="container m-auto px-4">
         <h1 className="font-bold text-center mt-4">{title} </h1>
-        <div className="p-9">
+      
         {children}
-        </div>
-        
         <footer>
             <hr />
-            <span>I'm here to stay (Footer)</span>
+            <span></span>
         </footer>
+        </div>
+        
+       
         </div>
     </div>
 )
