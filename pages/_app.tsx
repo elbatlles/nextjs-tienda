@@ -29,11 +29,16 @@ function MyApp({ Component, pageProps }:AppProps) {
   // perform automatic static optimization, causing every page in your app to
   // be server-side rendered.
   //
-  // MyApp.getInitialProps = async (appContext) => {
-  //   // calls page's `getInitialProps` and fills `appProps.pageProps`
-  //   const appProps = await App.getInitialProps(appContext);
-  //
-  //   return { ...appProps }
-  // }
+  /*
+   MyApp.getInitialProps = async (appContext) => {
+     // calls page's `getInitialProps` and fills `appProps.pageProps`
+   	const response = await fetch('http://localhost:3000/api/avo')
+     const { data: products }: TAPIAvoResponse = await response.json()
+     return {
+      props: {
+        products,
+      },
+    }
+  }*/
   
   export default MyApp

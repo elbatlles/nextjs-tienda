@@ -9,5 +9,5 @@ const allAvos =async(req:IncomingMessage,res:ServerResponse) => {
    res.setHeader('Content-type','application/json')
     res.end(JSON.stringify({data:allEntries,length}))
 }
-
+export const  URL="https://nextjs-tienda-two.vercel.app/"
 export default allAvos

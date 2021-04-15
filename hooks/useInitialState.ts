@@ -7,11 +7,12 @@ const initialState={
   buyer: [],
   orders: [],
   products: [],
+   
 }
-
+ 
 const useInitialState = () => {
   const [state, setstate] = useState(initialState);
-
+ 
   const [products, setproducts] = useState([])
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const productsResponse = await axios(URLSTRAPI)
     console.log(responseProducts.data)
     !didCancel && setproducts(responseProducts.data.data)
   }
- getProducts()
+ //getProducts()
     return () => {
      didCancel =true
     }
@@ -65,6 +66,7 @@ const productsResponse = await axios(URLSTRAPI)
     addNewOrder,
     products,
     state,
+    
   };
 };
 

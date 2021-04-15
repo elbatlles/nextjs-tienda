@@ -38,6 +38,7 @@ type Cart = {
   addToBuyer: (payload: any) => void;
   addNewOrder: (payload: any) => void;
   products: TProduct[];
+   
   state: {
     cart: TProduct[];
     buyer: any;
